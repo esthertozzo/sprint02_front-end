@@ -2,37 +2,70 @@ const formulario = document.getElementById('formFocus');
 
 if(formulario) {
     formulario.addEventListener('submit', (event) => {
-        event.preventDefault();
 
-        const rotina = document.getElementById('rotina').value;
-        const materias = document.getElementById('materias').value;
-        const exclusao = document.getElementById('exclusao').value;
+    event.preventDefault();
 
-        const checkboxes = document.querySelectorAll(
-            'input[type="checkbox"]:checked'
+    const rotina =
+    document.getElementById('rotina').value;
+
+    const materias =
+    document.getElementById('materias').value;
+
+    const exclusao =
+    document.getElementById('exclusao').value;
+
+    const checkboxes =
+    document.querySelectorAll(
+        'input[type="checkbox"]:checked'
+    );
+
+    if(rotina.trim() === ""){
+
+        alert(
+            "Por favor, descreva sua rotina de estudos."
         );
 
-        let prioridades = [];
+        return;
+    }
 
-        checkboxes.forEach(function(item){
-            prioridades.push(item.value);
-        });
+    if(checkboxes.length === 0){
 
-        const usuario = {
-            rotina,
-            materias,
-            exclusao,
-            prioridades
-        };
-
-        sessionStorage.setItem(
-            "focusUser",
-            JSON.stringify(usuario)
+        alert(
+            "Selecione ao menos uma prioridade."
         );
 
-        window.location.href = "dashboard.html";
+        return;
+    }
 
+    const confirmar = confirm(
+        "Deseja salvar suas preferências?"
+    );
+
+    if(!confirmar){
+        return;
+    }
+
+    let prioridades = [];
+
+    checkboxes.forEach(function(item){
+        prioridades.push(item.value);
     });
+
+    const usuario = {
+        rotina,
+        materias,
+        exclusao,
+        prioridades
+    };
+
+    sessionStorage.setItem(
+        "focusUser",
+        JSON.stringify(usuario)
+    );
+
+    window.location.href = "dashboard.html";
+
+});
 }
 
 const rotinaUsuario = document.getElementById('rotinaUsuario');
