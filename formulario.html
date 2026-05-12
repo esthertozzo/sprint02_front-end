@@ -2,10 +2,19 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Configuração Inteligente</title>
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+
+  <header class="topo">
+    <h1><img src="img/logo.png" alt="Focus"></h1>
+
+    <nav>
+      <a href="index.html">Voltar</a>
+    </nav>
+  </header>
 
   <main class="container">
 
@@ -23,7 +32,7 @@
         Deseja organizar fotos por matérias?
       </label>
 
-      <select>
+      <select title="Organizar por matérias">
         <option>Sim</option>
         <option>Não</option>
       </select>
@@ -32,7 +41,7 @@
         Como deseja excluir imagens?
       </label>
 
-      <select>
+      <select title="Excluir imagens">
         <option>IA automática</option>
         <option>Manual</option>
       </select>
@@ -44,17 +53,17 @@
       <div class="flex-opcoes">
 
         <div class="opcao">
-          <input type="checkbox">
+          <input type="checkbox" title="Provas">
           <span>Provas</span>
         </div>
 
         <div class="opcao">
-          <input type="checkbox">
+          <input type="checkbox" title="Trabalhos">
           <span>Trabalhos</span>
         </div>
 
         <div class="opcao">
-          <input type="checkbox">
+          <input type="checkbox" title="Anotações rápidas">
           <span>Anotações rápidas</span>
         </div>
 
