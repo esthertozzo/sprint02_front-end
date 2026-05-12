@@ -4,6 +4,7 @@
     --secondary-color: #023095;
     --tertiary-color: #0453e0;
     --bg-dark-black_gray: #2c2c2c;
+    --bg-card: #ebebeb;
 }
 
 *{
@@ -41,10 +42,9 @@ body{
   justify-content:space-around;
   align-items:center;
   flex-wrap:wrap;
-
   padding:40px;
   gap:30px;
-  
+  min-height:100dvh;    
 }
 
 .texto-hero{
@@ -64,7 +64,7 @@ body{
 }
 
 .card{
-  background:white;
+  background: var(--bg-card);
   padding:20px;
   border-radius:10px;
   width:250px;
@@ -87,12 +87,12 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-
-  min-height:100vh;
+  min-height:100dvh;
+  padding: 30px;
 }
 
 .formulario{
-  background:white;
+  background:var(--bg-card);
 
   width:500px;
 
@@ -107,6 +107,7 @@ body{
 textarea,
 select{
   padding:10px;
+  background: var(--bg-card);
 }
 
 .flex-opcoes{
@@ -131,16 +132,57 @@ select{
   display:flex;
   gap:20px;
   flex-wrap:wrap;
+  justify-content: center;
 }
-
+.materias .card button{
+  background:var(--secondary-color);
+  color:white;
+  padding:12px;
+  text-decoration:none;
+  border-radius:8px;
+  text-align:center;
+  border:none;
+  cursor:pointer;
+}
 .alertas{
   display:flex;
   flex-direction:column;
   gap:20px;
+  justify-content: center;
 }
 
 .card-alerta{
   background:#fff3cd;
   padding:20px;
   border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.dashboard{
+  display:flex;
+  flex-direction: column;
+  gap:30px;
+  padding:30px;
+  flex-wrap:wrap;
+}
+.card-alerta p{
+  color:#856404;
+}
+.card-alerta button{
+  background:#856404;
+  color:white;
+  padding:12px;
+  text-decoration:none;
+  border-radius:8px;
+  text-align:center;
+  border:none;
+  cursor:pointer;
+}
+
+.main-info{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  justify-content: space-around;
 }

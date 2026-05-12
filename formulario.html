@@ -18,7 +18,7 @@
 
   <main class="container">
 
-    <form class="formulario">
+    <form class="formulario" id="formFocus">
 
       <h1>Configure sua experiência</h1>
 
@@ -26,22 +26,22 @@
         Como é sua rotina de estudos?
       </label>
 
-      <textarea placeholder="Ex: faculdade integral, cursinho, estágio..."></textarea>
+      <textarea id="rotina" placeholder="Ex: faculdade integral, cursinho, estágio..."></textarea>
 
       <label>
         Deseja organizar fotos por matérias?
       </label>
 
-      <select title="Organizar por matérias">
+      <select id="materias" title="Organizar por matérias">
         <option>Sim</option>
         <option>Não</option>
       </select>
 
       <label>
-        Como deseja excluir imagens?
+        Como deseja a exclusão das imagens?
       </label>
 
-      <select title="Excluir imagens">
+      <select id="exclusao" title="Excluir imagens">
         <option>IA automática</option>
         <option>Manual</option>
       </select>
@@ -53,29 +53,31 @@
       <div class="flex-opcoes">
 
         <div class="opcao">
-          <input type="checkbox" title="Provas">
+          <input type="checkbox" value="Provas" title="Provas">
           <span>Provas</span>
         </div>
 
         <div class="opcao">
-          <input type="checkbox" title="Trabalhos">
+          <input type="checkbox" value="Trabalhos" title="Trabalhos">
           <span>Trabalhos</span>
         </div>
 
         <div class="opcao">
-          <input type="checkbox" title="Anotações rápidas">
+          <input type="checkbox" value="Anotações rápidas" title="Anotações rápidas">
           <span>Anotações rápidas</span>
         </div>
 
       </div>
 
-      <a href="dashboard.html" class="botao">
-        Finalizar
-      </a>
+      <button type="submit" class="botao">
+  Finalizar
+</button>
+      
 
     </form>
 
   </main>
 
+  <script src="script.js"></script>
 </body>
 </html>

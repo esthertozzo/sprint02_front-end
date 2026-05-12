@@ -18,16 +18,17 @@
 
   <main class="dashboard">
 
-    <section class="materias">
+    <section class="main-info">
 
-      <article class="card">
+      <div class="materias">
+        <article class="card">
         <h2>Matemática</h2>
 
         <p>12 imagens organizadas</p>
 
         <p>Próxima prova: 15/05</p>
 
-        <button>Abrir pasta</button>
+        <button type="button">Abrir pasta</button>
       </article>
 
       <article class="card">
@@ -37,8 +38,26 @@
 
         <p>IA encontrou conteúdo importante</p>
 
-        <button>Abrir pasta</button>
+        <button type="button">Abrir pasta</button>
       </article>
+      </div>
+      
+      <section class="perfil-usuario">
+
+  <div class="card">
+    <h2>Seu perfil</h2>
+
+    <p id="rotinaUsuario"></p>
+
+    <p id="organizacaoUsuario"></p>
+
+    <p id="exclusaoUsuario"></p>
+
+    <p id="prioridadesUsuario"></p>
+
+  </div>
+
+</section>
 
     </section>
 
@@ -50,6 +69,7 @@
         <p>
           6 imagens podem ser removidas automaticamente.
         </p>
+        <button type="button">Revisar imagens</button>
       </article>
 
       <article class="card-alerta">
@@ -58,11 +78,15 @@
         <p>
           “Entrega do trabalho - sexta-feira”
         </p>
+        <button type="button">Ver detalhes</button>
       </article>
 
     </section>
 
+    
+
   </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
