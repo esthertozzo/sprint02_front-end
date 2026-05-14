@@ -11,7 +11,11 @@
   margin:0;
   padding:0;
   box-sizing: border-box;
-   font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body{
@@ -53,6 +57,17 @@ body{
   padding:40px;
   gap:30px;
   min-height:100dvh;    
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4)
+  ),
+  url(/img/slide00.png);
+  background-repeat: no-repeat;
+  background-size: cover; /* esticar a imagem até ocupar toda a imagem*/
+  background-position: center;
+  background-position: 50%;
+  background-attachment: fixed;
 }
 
 .texto-hero{
@@ -89,6 +104,7 @@ body{
   text-decoration:none;
   border-radius:8px;
   text-align:center;
+  border:none;
 }
 
 .container{
@@ -237,23 +253,32 @@ select{
 }
 
 .texto-sobre{
-
   width:450px;
-
   display:flex;
-
   flex-direction:column;
-
   gap:20px;
-
   color:white;
 }
 
 .imagem-sobre img{
-
   width:450px;
-
   border-radius:20px;
-
   box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
+
+.controles-slide{
+  display:flex;
+  gap:15px;
+}
+
+.controles-slide button{
+  padding:10px 16px;
+  border:none;
+  border-radius:8px;
+  background:var(--tertiary-color);
+  color:white;
+  cursor: pointer;
+}
+ion-icon{
+  font-size: 20px;
 }
