@@ -84,3 +84,59 @@ if (rotinaUsuario) {
         document.getElementById("prioridadesUsuario").innerHTML = `<strong>Prioridades:</strong> ${dados.prioridades.join(", ")}`;
     }
 }
+
+const hero = document.querySelector(".hero");
+
+if(hero){
+
+    const imagens = [
+        "img/slide00.png",
+        "img/slide01.png",
+        "img/slide02.png"
+
+    ];
+
+    let indice = 0;
+
+    const botaoProximo =
+    document.getElementById("proximo");
+
+    const botaoAnterior =
+    document.getElementById("anterior");
+
+    botaoProximo.addEventListener("click", () => {
+        indice++;
+
+        if(indice >= imagens.length){
+            indice = 0;
+        }
+
+        hero.style.backgroundImage = `
+            linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.4)
+            ),
+            url(${imagens[indice]})
+        `;
+
+    });
+
+    botaoAnterior.addEventListener("click", () => {
+        indice--;
+
+        if(indice < 0){
+            indice = imagens.length - 1;
+        }
+
+        hero.style.backgroundImage = `
+            linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.4)
+            ),
+            url(${imagens[indice]})
+        `;
+
+    });
+}
