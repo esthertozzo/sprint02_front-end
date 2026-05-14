@@ -31,6 +31,14 @@ body{
 .topo a{
   color:white;
   text-decoration:none;
+  padding:10px;
+}
+.botao_comecar{
+  background:var(--secondary-color);
+  color:white;
+  padding:12px;
+  text-decoration:none;
+  border-radius:8px;
 }
 .topo img{
     width: 80px;
@@ -185,4 +193,67 @@ select{
   gap:30px;
   flex-wrap:wrap;
   justify-content: space-around;
+}
+
+ section {
+  height: 100dvh;
+} 
+
+
+.secao_prototipo{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:40px;
+}
+
+.texto-prototipo{
+  width:400px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  color:white;
+}
+
+.celular img{
+  width:260px;
+  border-radius:30px;
+  transition:0.4s;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+.celular img:hover{
+  transform:scale(1.05);
+}
+
+.secao_sobre{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.texto-sobre{
+
+  width:450px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+
+  color:white;
+}
+
+.imagem-sobre img{
+
+  width:450px;
+
+  border-radius:20px;
+
+  box-shadow:0 0 25px rgba(0,0,0,0.3);
 }
