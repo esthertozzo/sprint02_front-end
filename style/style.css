@@ -282,3 +282,103 @@ select{
 ion-icon{
   font-size: 20px;
 }
+
+@media (width <= 1024px){
+
+  .topo{
+    flex-direction:column;
+    gap:20px;
+    padding:25px;
+    text-align:center;
+  }
+
+  .topo nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+
+  .hero{
+    padding:120px 20px 40px;
+    justify-content:center;
+    text-align:center;
+    background-attachment:scroll;
+  }
+
+  .texto-hero{
+    width:100%;
+    max-width:600px;
+    align-items:center;
+  }
+
+  .card-info{
+    width:100%;
+  }
+
+  .card{
+    width:100%;
+    max-width:320px;
+  }
+
+  .secao_sobre{
+    padding:40px 20px;
+    text-align:center;
+  }
+
+  .texto-sobre{
+    width:100%;
+    max-width:600px;
+    align-items:center;
+  }
+
+  .imagem-sobre img{
+    width:100%;
+    max-width:400px;
+  }
+
+  .secao_prototipo{
+    padding:40px 20px;
+    text-align:center;
+  }
+
+  .texto-prototipo{
+    width:100%;
+    max-width:600px;
+    align-items:center;
+  }
+
+  .celular img{
+    width:220px;
+  }
+
+  .formulario{
+    width:100%;
+    max-width:500px;
+  }
+
+  .dashboard{
+    padding:20px;
+  }
+
+  .materias{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .alertas{
+    width:100%;
+  }
+
+  .controles-slide{
+    width:100%;
+    justify-content:center;
+  }
+
+  section{
+    height:auto;
+    min-height:100dvh;
+    padding-block:60px;
+  }
+
+}
